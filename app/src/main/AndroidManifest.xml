@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.xg.insure">
+<uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+
+    <application
+        android:name=".base.BaseApplication"
+        android:allowBackup="true"
+        android:hardwareAccelerated="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".activity.MainActivity"
+            android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".activity.SplashActivity">
+
+        </activity>
+        <activity android:name=".activity.FinancingListActivity"/>
+        <activity android:name=".activity.BookingActivity"/>
+        <activity android:name=".activity.LoginActivity"/>
+        <activity
+            android:name=".activity.ProductNameActivity"
+            android:hardwareAccelerated="false">
+
+        </activity>
+        <activity android:name=".activity.ResetPswActivity"/>
+        <activity android:name=".activity.SetSecurityProtectQuestionActiviy">
+
+        </activity>
+        <activity android:name=".activity.InviteManageActivity">
+
+        </activity>
+        <activity android:name=".activity.RegistActivity">
+        </activity>
+        <activity
+            android:name=".activity.BookingPayActivity"
+            android:hardwareAccelerated="false"/>
+        <activity android:name=".activity.AboutUsActivity"/>
+        <activity android:name=".activity.BuyActivity">
+
+        </activity>
+        <activity android:name=".activity.SettingActivity">
+        </activity>
+        <activity android:name=".activity.AccountDetailedActivity"/>
+        <activity android:name=".activity.BankCardActivity"/>
+        <activity android:name=".activity.ChooseBankCardActivity"/>
+        <activity android:name=".activity.ContactUsActivity">
+
+        </activity>
+        <activity android:name=".activity.CostDeclareActivity">
+
+        </activity>
+        <activity android:name=".activity.DeleteBankCardActivity"/>
+        <activity android:name=".activity.SecurityCenterActivity">
+        </activity>
+        <activity android:name=".activity.ResetLoginPSWActivity">
+
+        </activity>
+
+    </application>
+
+</manifest>

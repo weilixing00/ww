@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:clipToPadding="true"
+              android:background="@color/bgColor"
+              android:fitsSystemWindows="true"
+              android:orientation="vertical">
+
+    <include layout="@layout/view_header"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@mipmap/logo_img2x"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:text="浙商保险"
+            android:textStyle="bold"
+            android:textColor="@color/textColorBlack"
+            android:textSize="15sp"
+            android:id="@+id/textView8"/>
+    </LinearLayout>
+
+    <View style="@style/line_gray_deep"/>
+
+    <LinearLayout
+        android:background="#FFF"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="15dp"
+            android:src="@mipmap/phone_img2x"/>
+
+        <EditText
+            android:singleLine="true"
+            android:inputType="number"
+            android:id="@+id/et_phonenum_activity_login"
+            style="@style/style_et_textsize15"
+            android:layout_marginLeft="14sp"
+            android:hint="手机号"/>
+    </LinearLayout>
+
+    <View
+        style="@style/line_gray"
+        android:layout_marginLeft="@dimen/margin_left10"/>
+
+    <LinearLayout
+        android:background="#FFF"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="15dp"
+            android:src="@mipmap/key_img2x"/>
+
+        <EditText
+            android:singleLine="true"
+            android:inputType="textPassword"
+            android:id="@+id/et_psw_activity_login"
+            style="@style/style_et_textsize15"
+            android:layout_marginLeft="14sp"
+            android:hint="登录密码"/>
+    </LinearLayout>
+
+    <View style="@style/line_gray"/>
+
+
+    <TextView
+        android:id="@+id/tv_forget_psw_activity_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginRight="@dimen/margin_left10"
+        android:layout_marginTop="13dp"
+        android:text="忘记密码"
+        android:textColor="#2693ff"
+        android:textSize="13sp"/>
+
+
+    <Button
+        android:id="@+id/bt_login_activity_login"
+        style="@style/style_bt_red"
+
+        android:text="立即登录"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <LinearLayout
+        android:id="@+id/ll_regist_activity_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="20dp"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="13sp"
+            android:textColor="@color/btColorLikeRede93030"
+            android:text="还不是会员，立即注册"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/btColorLikeRede93030"/>
+    </LinearLayout>
+</LinearLayout>

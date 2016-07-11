@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/bgColor"
+              android:clipToPadding="true"
+              android:fitsSystemWindows="true"
+              android:orientation="vertical">
+
+    <include layout="@layout/view_header"/>
+
+    <View
+        android:layout_marginTop="10dp"
+        style="@style/line_gray_deep"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:background="#FFF"
+        android:orientation="vertical"
+        android:paddingLeft="20dp"
+        android:paddingRight="15dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@mipmap/modifyloginpassword_password"/>
+
+            <EditText
+                android:singleLine="true"
+                android:id="@+id/et_originality_login_psw_activity_reset_login_psw"
+                android:textCursorDrawable="@drawable/color_cursor"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="15dp"
+                android:background="@null"
+                android:hint="原登录密码"
+                android:textColor="@color/textColorBlack"
+                android:textColorHint="@color/textColorGray"
+                android:textSize="14sp"/>
+        </LinearLayout>
+
+        <View
+            style="@style/line_gray_deep"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@mipmap/modifyloginpassword_password"/>
+
+            <EditText
+                android:id="@+id/et_set_new_login_psw_activity_reset_login_psw"
+                android:textCursorDrawable="@drawable/color_cursor"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:singleLine="true"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="15dp"
+                android:background="@null"
+                android:hint="设置新登录密码"
+                android:textColor="@color/textColorBlack"
+                android:textColorHint="@color/textColorGray"
+                android:textSize="14sp"/>
+        </LinearLayout>
+
+        <View
+            style="@style/line_gray_deep"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@mipmap/modifyloginpassword_password"/>
+
+            <EditText
+                android:id="@+id/et_comfirm_new_psw_activity_reset_login_psw"
+                android:textCursorDrawable="@drawable/color_cursor"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="15dp"
+                android:singleLine="true"
+                android:background="@null"
+                android:hint="确认新密码"
+                android:textColor="@color/textColorBlack"
+                android:textColorHint="@color/textColorGray"
+                android:textSize="14sp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        style="@style/line_gray_deep"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <Button
+
+        style="@style/style_bt_red"
+        android:layout_marginBottom="20dp"
+        android:text="确定"
+        android:textSize="16sp"
+        android:id="@+id/bt_sure_activity_reset_login_psw"/>
+</LinearLayout>

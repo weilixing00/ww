@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:clipToPadding="true"
+              android:background="@color/bgColor"
+              android:fitsSystemWindows="true"
+              android:orientation="vertical">
+
+    <include layout="@layout/view_header"/>
+
+    <LinearLayout
+        android:id="@+id/ll_regist_and_login_activity_help_center"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="13dp"
+        android:paddingRight="13dp"
+        android:background="#FFF"
+        >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="注册登录"
+            android:textColor="@color/textColorBlack"
+            android:textSize="15sp"/>
+
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginRight="3dp"
+            android:src="@mipmap/arrow"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_marginLeft="13dp"
+        android:layout_marginRight="13dp"
+        style="@style/line_gray"/>
+    <LinearLayout
+        android:id="@+id/ll_real_name_activity_help_center"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:background="#FFF"
+        android:paddingLeft="13dp"
+        android:paddingRight="13dp"
+        >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="实名认证"
+            android:textColor="@color/textColorBlack"
+            android:textSize="15sp"/>
+
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginRight="3dp"
+            android:src="@mipmap/arrow"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_marginLeft="13dp"
+        android:layout_marginRight="13dp"
+        style="@style/line_gray"/>
+    <LinearLayout
+        android:id="@+id/ll_scribe_question_activity_help_center"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="#FFF"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="13dp"
+        android:paddingRight="13dp"
+        >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="申购问题"
+            android:textColor="@color/textColorBlack"
+            android:textSize="15sp"/>
+
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginRight="3dp"
+            android:src="@mipmap/arrow"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_marginLeft="13dp"
+        android:layout_marginRight="13dp"
+        style="@style/line_gray"/>
+    <LinearLayout
+        android:id="@+id/ll_safe_question_activity_help_center"
+        android:layout_width="match_parent"
+        android:background="#FFF"
+        android:layout_height="55dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="13dp"
+        android:paddingRight="13dp"
+        >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="安全问题"
+            android:textColor="@color/textColorBlack"
+            android:textSize="15sp"/>
+
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginRight="3dp"
+            android:src="@mipmap/arrow"/>
+
+    </LinearLayout>
+
+    <View
+        style="@style/line_gray"/>
+</LinearLayout>

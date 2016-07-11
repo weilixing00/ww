@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:clipToPadding="true"
+              android:background="@color/bgColor"
+              android:fitsSystemWindows="true"
+              android:orientation="vertical">
+
+    <include layout="@layout/view_header"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:text="* 用户名设置后不可修改"
+        android:textColor="@color/textColorGray"
+        android:textSize="@dimen/textsize_smalle"/>
+
+    <View
+        style="@style/line_gray_deep"/>
+
+    <LinearLayout
+android:background="#fff"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+android:gravity="center_vertical"
+        android:paddingLeft="20dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_gravity="center_vertical"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@mipmap/safe_users"/>
+
+        <EditText
+            android:id="@+id/et_username_activity_set_username"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:singleLine="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/margin_left10"
+            android:gravity="center_vertical"
+            android:hint="用户名"/>
+    </LinearLayout>
+
+    <View
+        style="@style/line_gray_deep"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <Button
+        android:id="@+id/bt_sure_activity_set_username"
+        style="@style/style_bt_red"
+        android:layout_marginBottom="20dp"
+        android:text="确定"/>
+</LinearLayout>

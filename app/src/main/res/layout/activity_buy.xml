@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/bgColor"
+              android:clipToPadding="true"
+              android:fitsSystemWindows="true"
+              android:orientation="vertical">
+
+    <include layout="@layout/view_header"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFF"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_left10"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/margin_left10">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000"
+                android:textSize="@dimen/textsize_common"
+                android:text="圣诞树"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/textColorGray"
+                android:textSize="@dimen/textsize_common"
+                android:text="("/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000"
+                android:textSize="@dimen/textsize_common"
+                android:text="圣诞树"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000"
+                android:textSize="@dimen/textsize_common"
+                android:text=")"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/margin_left10"
+            android:paddingTop="30dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#8a8a8a"
+                android:textSize="@dimen/textsize_smalle"
+                android:text="预期年化:"/>
+
+            <TextView
+                android:id="@+id/tv_expect_year_rate_activity_buy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:textColor="@color/btColorLikeRede93030"
+                android:textSize="@dimen/textsize_common"
+                android:text="8.37"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#F00"
+                android:textSize="@dimen/textsize_common"
+                android:text="%"/>
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:textColor="#8a8a8a"
+                android:textSize="@dimen/textsize_smalle"
+                android:text="期限:"/>
+
+            <TextView
+                android:id="@+id/tv_time_limit_activity_buy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:textColor="@color/textColorBlack"
+                android:textSize="15sp"
+                android:text="5"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/textColorBlack"
+                android:textSize="15sp"
+                android:text="天"/>
+        </LinearLayout>
+
+        <View
+            android:layout_marginLeft="@dimen/margin_left10"
+            android:layout_marginRight="@dimen/margin_left10"
+            android:layout_marginTop="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@mipmap/line_img"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="#FFF"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/margin_left10">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#646464"
+                android:textSize="@dimen/textsize_smalle"
+                android:text="剩余金额:"/>
+
+            <TextView
+                android:id="@+id/tv_remind_money_activity_buy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:textColor="#000"
+                android:textSize="@dimen/textsize_common"
+                android:text="8.37"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000"
+                android:textSize="@dimen/textsize_common"
+                android:text="元"
+                android:id="@+id/textView6"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        style="@style/line_gray"
+       />
+
+    <View
+        style="@style/line_gray"
+        android:layout_marginTop="18dp"/>
+
+    <LinearLayout
+        android:background="#FFF"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingRight="@dimen/margin_left10"
+        android:paddingLeft="@dimen/margin_left10">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="申购金额:"
+            android:textColor="#646464"
+            android:textSize="@dimen/textsize_smalle"/>
+
+        <EditText
+            android:singleLine="true"
+            android:id="@+id/et_subscribe_money_activity_buy"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:layout_weight="1"
+            android:hint="100,000.00元起购"
+            android:paddingLeft="15dp"
+            android:textColor="@color/textColorBlack"
+            android:textColorHint="#cccccc"
+            android:textSize="15sp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/margin_left10"
+            android:text="元"
+            android:textColor="@color/textColorBlack"
+            android:textSize="15sp"/>
+    </LinearLayout>
+
+    <View
+        style="@style/line_gray"/>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_left10"
+        android:layout_marginTop="@dimen/margin_left10"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="预期本息收益:  "
+            android:textColor="@color/textColorGray"
+            android:textSize="@dimen/textsize_smaller"/>
+
+        <TextView
+            android:id="@+id/tv_expect_income_activity_buy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="00"
+            android:textColor="#ef6969"
+            android:textSize="@dimen/textsize_smaller"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="  元"
+            android:textColor="@color/textColorGray"
+            android:textSize="@dimen/textsize_smaller"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <Button
+        android:id="@+id/bt_sure_subscribe_activity_buy"
+        style="@style/style_bt_red"
+        android:text="确认申购"
+        android:textSize="15sp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="@dimen/margin_left10"
+        android:layout_marginTop="15dp"
+        android:background="@color/bgColor"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/iv_agree_activity_buy"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:src="@mipmap/choose_select_btn2x"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:text="我同意"
+            android:textColor="@color/textColorBlack"
+            android:textSize="@dimen/textsize_smaller"/>
+
+        <TextView
+            android:id="@+id/tv_deal_activity_buy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="《产品服务协议》"
+            android:textColor="#2693ff"
+
+            android:textSize="@dimen/textsize_smaller"/>
+    </LinearLayout>
+</LinearLayout>

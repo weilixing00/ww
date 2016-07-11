@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/bgColor"
+              android:clipToPadding="true"
+              android:fitsSystemWindows="true"
+              android:orientation="vertical">
+
+    <include layout="@layout/view_header"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:text="* 交易密码可以用来保护投资安全"
+        android:textColor="@color/textColorGray"
+        android:textSize="11sp"/>
+
+    <View
+        style="@style/line_gray_deep"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+        android:background="#fff"
+        android:orientation="vertical"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="10dp"
+                android:src="@mipmap/setpassword_phone"/>
+
+            <TextView
+                android:id="@+id/tv_phone_num_activity_set_trade_psw"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:textColor="@color/textColorBlack"
+                android:textSize="14sp"
+                tools:text="1234"/>
+
+        </LinearLayout>
+
+        <View
+            style="@style/line_gray_deep"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="10dp"
+                android:src="@mipmap/setpassword_message"/>
+
+            <EditText
+                android:id="@+id/et_msg_code_activity_set_trade_psw"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:singleLine="true"
+                android:inputType="number"
+                android:gravity="center_vertical"
+                android:hint="短信验证码"
+                android:textColor="@color/textColorBlack"
+                android:textColorHint="@color/textColorGray"
+                android:textCursorDrawable="@drawable/color_cursor"
+                android:textSize="14sp"/>
+
+            <View
+                android:layout_width="1px"
+                android:layout_height="match_parent"
+                android:background="@color/lineDashesGray"
+                android:layout_marginBottom="13dp"
+                android:layout_marginTop="13dp"
+                />
+            <TextView
+                android:id="@+id/tv_obtain_msg_code_activity_set_trade_psw"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="获取验证码"
+                android:textColor="@color/btColorLikeRede93030"
+                android:textSize="14sp"
+                android:layout_marginLeft="18dp"
+                android:layout_marginRight="30dp"/>
+        </LinearLayout>
+
+        <View
+            style="@style/line_gray_deep"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="10dp"
+                android:src="@mipmap/setpassword_password"/>
+
+            <EditText
+                android:id="@+id/et_set_trade_psw_activity_set_trade_psw"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:inputType="textPassword"
+                android:singleLine="true"
+                android:hint="设置交易密码"
+                android:textColor="@color/textColorBlack"
+                android:textColorHint="@color/textColorGray"
+                android:textCursorDrawable="@drawable/color_cursor"
+                android:textSize="14sp"/>
+
+        </LinearLayout>
+
+        <View
+            style="@style/line_gray_deep"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="10dp"
+                android:src="@mipmap/setpassword_password"/>
+
+            <EditText
+                android:id="@+id/et_confirm_trade_psw_activity_set_trade_psw"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:hint="确认交易密码"
+                android:inputType="textPassword"
+                android:singleLine="true"
+                android:textColor="@color/textColorBlack"
+                android:textColorHint="@color/textColorGray"
+                android:textCursorDrawable="@drawable/color_cursor"
+                android:textSize="14sp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+    <View
+        style="@style/line_gray_deep"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+    <Button
+        android:id="@+id/bt_sure_activity_set_trade_psw"
+        style="@style/style_bt_red"
+        android:text="确定"
+        android:layout_marginBottom="20dp"/>
+</LinearLayout>

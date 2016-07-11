@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:clipToPadding="true"
+              android:fitsSystemWindows="true"
+              android:background="@color/bgColor"
+              android:orientation="vertical">
+
+    <include layout="@layout/view_header"/>
+
+    <com.jude.easyrecyclerview.EasyRecyclerView
+        android:id="@+id/erv_activity_web_affiche"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginLeft="13dp"
+        android:layout_marginRight="13dp"
+        android:layout_weight="1"/>
+
+    <View
+        style="@style/line_gray"/>
+</LinearLayout>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent" android:fitsSystemWindows="true"
+              android:clipToPadding="true"
+
+              android:orientation="vertical">
+
+    <include layout="@layout/view_header"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/line_margin_top8"
+        android:layout_marginLeft="@dimen/margin_left10"
+        android:layout_marginTop="@dimen/line_margin_top8"
+        android:text="   * 认证邮箱可以提高账户安全等级"
+        android:textColor="#FF0"
+        android:textSize="@dimen/textsize_smaller"/>
+
+    <View
+        style="@style/line_gray"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/margin_left10">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@mipmap/ic_launcher"/>
+
+        <EditText
+            android:singleLine="true"
+            android:id="@+id/et_new_email_address_activity_email_approve"
+            android:paddingLeft="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:hint="新邮箱地址"
+            android:background="@null"
+            android:textColorHint="@color/textColorGray"
+            android:textSize="@dimen/textsize_common"/>
+    </LinearLayout>
+
+    <View
+        style="@style/line_gray"
+        android:layout_marginBottom="@dimen/margin_left10"
+        android:layout_marginTop="@dimen/margin_left10"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/margin_left10">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@mipmap/ic_launcher"/>
+
+        <EditText
+            android:id="@+id/et_email_verification_code_activity_email_approve"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingLeft="8dp"
+            android:layout_weight="1"
+            android:hint="邮箱验证码"
+            android:textColorHint="@color/textColorGray"
+            android:textSize="@dimen/textsize_common"/>
+
+        <TextView
+            android:id="@+id/tv_obtain_verification_code_activity_email_approve"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="获取验证码"
+            android:textColor="#F00"
+            android:textSize="@dimen/textsize_common"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <Button
+        android:id="@+id/bt_sure_activity_email_approve"
+        style="@style/style_bt_red"
+        android:layout_marginBottom="@dimen/margin_left10"
+        android:text="确定"/>
+</LinearLayout>

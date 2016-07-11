@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/bgColor"
+              android:clipToPadding="true"
+              android:fitsSystemWindows="true"
+              android:orientation="vertical">
+
+    <include layout="@layout/view_header"/>
+
+    <View
+        style="@style/line_gray"
+        android:layout_marginTop="8dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/margin_left10"
+        android:paddingRight="@dimen/margin_left10">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="支付金额:"
+                android:textColor="#000"
+                android:textSize="@dimen/textsize_common"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:textColor="#F00"
+                android:textSize="@dimen/textsize_common"
+                tools:text="1000"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="元:"
+                android:textColor="#000"
+                android:textSize="@dimen/textsize_common"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/lineDashesGray"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="快捷支付:"
+                android:textColor="#000"
+                android:textSize="@dimen/textsize_common"/>
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="20dp"
+                android:src="@mipmap/ic_launcher"
+                android:textColor="#F00"
+                />
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="中国银行爱汉莎但是:"
+                android:textColor="#000"
+                android:textSize="@dimen/textsize_common"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="**36:"
+                android:textColor="#000"
+                android:textSize="@dimen/textsize_common"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        style="@style/line_gray"/>
+
+    <View
+        style="@style/line_gray"
+        android:layout_marginTop="8dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="@dimen/margin_left10"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="支付密码:"
+            android:textColor="#000"
+            android:textSize="@dimen/textsize_common"/>
+
+        <EditText
+            android:singleLine="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_left10"
+            android:hint="请输入支付密码"
+            android:textColor="#000"
+            android:textSize="@dimen/textsize_common"/>
+
+    </LinearLayout>
+
+    <View
+        style="@style/line_gray"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="@dimen/margin_left10"
+        android:layout_marginRight="@dimen/margin_left10"
+        android:layout_marginTop="30dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/bg_bt_yellow_radio"
+            android:gravity="center"
+            android:text="下次支付"
+            android:textColor="@color/textColorGray"
+            android:textSize="@dimen/textsize_common"/>
+
+        <View
+            android:layout_width="10dp"
+            android:layout_height="match_parent"/>
+
+        <Button
+            android:layout_width="0dp"
+
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/bg_bt_red_radio"
+            android:gravity="center"
+            android:text="确认支付"
+            android:textColor="#fff"
+            android:textSize="@dimen/textsize_common"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_left10"
+        android:layout_marginRight="@dimen/margin_left10"
+        android:layout_marginTop="20dp"
+        android:text="温馨提示:  该预约产品请在11月25号之前完成支付,否则预约失效!"
+        android:textColor="@color/textColorGray"
+        android:textSize="@dimen/textsize_smaller"/>
+</LinearLayout>

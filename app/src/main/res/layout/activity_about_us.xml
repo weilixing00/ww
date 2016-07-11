@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="true"
+    android:background="@color/bgColor"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                  android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:clipToPadding="true"
+                  android:background="@color/bgColor"
+                  android:fitsSystemWindows="true"
+                  android:orientation="vertical">
+
+        <include layout="@layout/view_header"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:background="@mipmap/logo_img2x"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="浙商保险"
+                android:textColor="@color/textColorBlack"
+                android:textSize="14sp"/>
+        </LinearLayout>
+        <View
+            style="@style/line_gray_deep" />
+
+        <LinearLayout
+            android:id="@+id/ll_introduce_activity_about_us"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:background="#fff"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@mipmap/about1_img"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingLeft="15dp"
+                android:text="平台介绍"
+                android:textColor="@color/textColorBlack"
+                android:textSize="14sp"/>
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:src="@mipmap/arrow"/>
+
+        </LinearLayout>
+
+            <View
+            style="@style/line_gray"
+            android:layout_marginLeft="@dimen/margin_left10"
+            android:layout_marginRight="@dimen/margin_left10"/>
+
+
+        <LinearLayout
+            android:id="@+id/ll_safe_ensure_activity_about_us"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center_vertical"
+            android:background="#fff"
+            android:orientation="horizontal"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@mipmap/about2_img"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingLeft="15dp"
+                android:text="安全保障"
+                android:textColor="@color/textColorBlack"
+                android:textSize="14sp"/>
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:src="@mipmap/arrow"/>
+
+        </LinearLayout>
+        <View
+            style="@style/line_gray"
+            android:layout_marginLeft="@dimen/margin_left10"
+            android:layout_marginRight="@dimen/margin_left10"/>
+
+        <LinearLayout
+            android:id="@+id/ll_web_affiche_activity_about_us"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center_vertical"
+            android:background="#fff"
+            android:orientation="horizontal"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@mipmap/about3_img"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingLeft="15dp"
+                android:text="网站公告"
+                android:textColor="@color/textColorBlack"
+                android:textSize="14sp"/>
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:src="@mipmap/arrow"/>
+
+        </LinearLayout>
+
+        <View
+            style="@style/line_gray"
+            android:layout_marginLeft="@dimen/margin_left10"
+            android:layout_marginRight="@dimen/margin_left10"/>
+
+        <LinearLayout
+            android:id="@+id/ll_media_activity_about_us"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:background="#fff"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@mipmap/about4_img"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingLeft="15dp"
+                android:text="媒体报道"
+                android:textColor="@color/textColorBlack"
+                android:textSize="14sp"/>
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:src="@mipmap/arrow"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_cost_activity_about_us"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:background="#fff"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@mipmap/about5_img"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingLeft="15dp"
+                android:text="资费说明"
+                android:textColor="@color/textColorBlack"
+                android:textSize="14sp"/>
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:src="@mipmap/arrow"/>
+
+        </LinearLayout>
+
+
+
+        <View
+            style="@style/line_gray"
+            android:layout_marginLeft="@dimen/margin_left10"
+            android:layout_marginRight="@dimen/margin_left10"/>
+
+        <LinearLayout
+            android:id="@+id/ll_about_us_activity_about_us"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:background="#fff"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@mipmap/about1_img"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingLeft="15dp"
+                android:text="联系我们"
+                android:textColor="@color/textColorBlack"
+                android:textSize="14sp"/>
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:src="@mipmap/arrow"/>
+
+        </LinearLayout>
+
+        <View
+
+            style="@style/line_gray_deep"/>
+    </LinearLayout>
+</ScrollView>

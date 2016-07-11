@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="textColorMoreFragmentWhite">#ffe4c4</color>
+    <color name="textColorMoreFragmentRed">#c64539</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="colorPureWhite">#FFFFFF</color>
+    <color name="bgColor">#f6f6fb</color>
+    <color name="textColorShallowGray">#ADADAD</color>
+    <color name="btVerificationCodeLikeRed">#FF0000</color>
+    <color name="btColorLikeRede93030">#e93030</color>
+    <color name="lineGray">#e2e2e2</color>
+    <color name="lineDashesGray">#dcdcdc</color>
+    <color name="textColorGray">#969696</color>
+    <color name="textColorGray646464">#646464</color>
+    <color name="textColorGray555555">#555555</color>
+    <color name="hintTextColorGraycccccc">#cccccc</color>
+    <color name="textColorBlack">#323232</color>
+    <color name="textColorLikeBlack">#333333</color>
+    <color name="textColorBlue">#2693ff</color>
+    <color name="textColorYellow">#ffae00</color>
+    <color name="textColorGreen">#0dc0a0</color>
+</resources>

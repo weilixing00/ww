@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_gravity="center"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginRight="20dp"
+        android:background="@null"
+        android:orientation="horizontal">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+
+        <ImageView
+            android:id="@+id/iv_dismiss_dialogfragment_financing_calculator"
+            android:layout_width="35dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="right"
+            android:background="@mipmap/close_financing_btn"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/bg_dialogfragment_white"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/margin_left10"
+        android:paddingLeft="@dimen/margin_left10"
+        android:paddingRight="@dimen/margin_left10"
+        android:paddingTop="@dimen/margin_left10">
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="理财计算器"
+            android:textColor="@color/textColorBlack"
+            android:textSize="@dimen/textsize_smalle"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="理财金额:"
+                android:textColor="@color/textColorGray646464"
+                android:textSize="@dimen/textsize_smalle"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/et_financing_amount_dialogfragment_financing_calculator"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="@dimen/margin_left10"
+                    android:text="0"
+                    android:inputType="number"
+                    android:singleLine="true"
+                    android:textColor="@color/textColorBlack"
+                    android:textSize="@dimen/textsize_smalle"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="元"
+                    android:textColor="@color/textColorGray"
+                    android:textSize="@dimen/textsize_smalle"/>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <View
+            style="@style/line_gray"
+            android:layout_marginBottom="@dimen/margin_left10"
+            android:layout_marginTop="@dimen/margin_left10"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_expect_year_rate_dialogfragment_financing_calculator"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textColor="@color/textColorBlack"
+                    android:textSize="@dimen/textsize_smalle"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_left10"
+                    android:text=" %"
+                    android:textColor="@color/textColorGray"
+                    android:textSize="@dimen/textsize_smalle"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="5dp"
+                android:text="预约年化:"
+                android:textColor="@color/textColorGray646464"
+                android:textSize="@dimen/textsize_smalle"/>
+        </RelativeLayout>
+
+        <View
+            style="@style/line_gray"
+            android:layout_marginBottom="@dimen/margin_left10"
+            android:layout_marginTop="@dimen/margin_left10"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="计息方式:"
+                android:textColor="@color/textColorGray646464"
+                android:textSize="@dimen/textsize_smalle"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_interest_type_dialogfragment_financing_calculator"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/textColorBlack"
+                    android:textSize="@dimen/textsize_smalle"
+                    tools:text="一次行还本付息"/>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <View
+            style="@style/line_gray"
+            android:layout_marginBottom="@dimen/margin_left10"
+            android:layout_marginTop="@dimen/margin_left10"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="理财期限:"
+                android:textColor="@color/textColorGray646464"
+                android:textSize="@dimen/textsize_smalle"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_financing_deadtime_dialogfragment_financing_calculator"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textColor="@color/textColorBlack"
+                    android:textSize="@dimen/textsize_smalle"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_left10"
+                    android:text="元"
+                    android:textColor="@color/textColorGray"
+                    android:textSize="@dimen/textsize_smalle"/>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <View
+            style="@style/line_gray"
+            android:layout_marginBottom="@dimen/margin_left10"
+            android:layout_marginTop="@dimen/margin_left10"/>
+
+        <LinearLayout
+            android:paddingTop="@dimen/margin_left10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#fef5f5"
+            android:layout_marginLeft="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="本息合计:"
+                android:textColor="@color/textColorBlack"
+                android:textSize="@dimen/textsize_smalle"/>
+
+            <TextView
+                android:id="@+id/tv_total_capital_interest_dialogfragment_financing_calculator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:text="0.00"
+                android:textColor="@color/btColorLikeRede93030"
+                android:textSize="@dimen/textsize_smalle"/>
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="元"
+                android:textColor="@color/textColorGray646464"
+                android:textSize="@dimen/textsize_smalle"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:background="#fef5f5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:paddingBottom="@dimen/margin_left10"
+            android:paddingTop="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="利息收入:"
+                android:textColor="@color/textColorBlack"
+                android:textSize="@dimen/textsize_smalle"/>
+
+            <TextView
+                android:id="@+id/tv_interest_income_dialogfragment_financing_calculator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:text="0.00"
+                android:textColor="@color/btColorLikeRede93030"
+                android:textSize="@dimen/textsize_smalle"/>
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="元"
+                android:textColor="@color/textColorGray646464"
+                android:textSize="@dimen/textsize_smalle"/>
+        </LinearLayout>
+
+        <Button
+            android:layout_marginTop="15dp"
+            android:id="@+id/bt_calculator_dialogfragment_financing_calculator"
+            style="@style/style_bt_red"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp"
+            android:text="计算"
+            android:textSize="15sp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginRight="20dp"
+        android:background="@null"
+        android:orientation="horizontal"/>
+</LinearLayout>

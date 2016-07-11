@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:clipToPadding="true"
+              android:fitsSystemWindows="true"
+              android:background="@color/bgColor"
+              android:orientation="vertical">
+
+    <include layout="@layout/view_header"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:text="* 安全保护问题可以提高密码安全性"
+        android:textColor="@color/textColorGray"
+        android:textSize="@dimen/textsize_smaller"/>
+
+    <View
+        style="@style/line_gray_deep"/>
+
+    <LinearLayout
+        android:background="#fff"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/ll_chose_question_activity_set_security_protect_question"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+
+            android:layout_marginTop="18dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@mipmap/setquestion_question"/>
+            <TextView
+                android:id="@+id/tv_question_activity_set_security_protect_question"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="您的生日是哪一天"
+                android:textSize="14sp"
+                android:textColor="@color/textColorGray"
+                android:layout_marginLeft="15sp"/>
+
+            <ImageView
+                android:id="@+id/iv_arrow_activity_set_security_protect_question"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center_vertical"
+                android:src="@mipmap/setquestion_drop_down"/>
+        </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="40dp"
+                android:orientation="vertical">
+
+
+
+                <EditText
+                    android:id="@+id/et_answer_activity_set_security_protect_question"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:background="@null"
+                    android:hint="请输入答案"
+                    android:singleLine="true"
+                    android:textColorHint="@color/textColorGray"
+                    android:textSize="@dimen/textsize_common"/>
+
+                <View
+                    android:layout_marginTop="13dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/btColorLikeRede93030"/>
+
+            </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        style="@style/line_gray_deep"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <Button
+        android:id="@+id/bt_sure_activity_set_security_protect_question"
+        style="@style/style_bt_red"
+        android:layout_marginBottom="20dp"
+        android:text="确定"/>
+</LinearLayout>

@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:fitsSystemWindows="true"
+              android:clipToPadding="true"
+              android:background="@color/bgColor"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+<include layout="@layout/view_header"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="11sp"
+        android:textColor="@color/textColorGray"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:text="*  安全保护问题可以提高密码安全性"/>
+    <View
+        style="@style/line_gray_deep"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#fff">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="20dp"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@mipmap/setpassword_phone"/>
+            <TextView
+                android:id="@+id/tv_phone_num_activity_reset_safe_protect_question"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:textColor="@color/textColorBlack"
+                android:layout_marginLeft="15dp"
+                android:text="13"/>
+        </LinearLayout>
+        <View
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="151dp"
+            style="@style/line_gray_deep"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginLeft="20dp"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@mipmap/setpassword_message"/>
+
+            <EditText
+                android:id="@+id/et_msg_code_activity_reset_safe_protect_question"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:inputType="number"
+                android:singleLine="true"
+                android:gravity="center_vertical"
+                android:hint="短信验证码"
+                android:textColor="@color/textColorBlack"
+                android:textColorHint="@color/textColorGray"
+                android:textCursorDrawable="@drawable/color_cursor"
+                android:textSize="14sp"/>
+
+            <View
+                android:layout_width="1px"
+                android:layout_height="match_parent"
+                android:background="@color/lineDashesGray"
+                android:layout_marginBottom="13dp"
+                android:layout_marginTop="13dp"
+                />
+            <TextView
+                android:id="@+id/tv_obtain_msg_code_activity_reset_safe_protect_question"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="获取验证码"
+                android:textColor="@color/btColorLikeRede93030"
+                android:textSize="14sp"
+                android:layout_marginLeft="18dp"
+                android:layout_marginRight="30dp"/>
+        </LinearLayout>
+        <View
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            style="@style/line_gray_deep"/>
+        <LinearLayout
+            android:background="#fff"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/ll_chose_question_activity_reset_safe_protect_question"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+
+                android:layout_marginTop="18dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@mipmap/setquestion_question"/>
+                <TextView
+                    android:id="@+id/tv_question_activity_reset_safe_protect_question"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="您的生日是哪一天"
+                    android:textSize="14sp"
+                    android:textColor="@color/textColorGray"
+                    android:layout_marginLeft="15sp"/>
+
+                <ImageView
+                    android:id="@+id/iv_arrow_activity_reset_safe_protect_question"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@mipmap/setquestion_drop_down"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="40dp"
+                android:orientation="vertical">
+
+
+
+                <EditText
+                    android:id="@+id/et_answer_activity_reset_safe_protect_question"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:background="@null"
+                    android:hint="请输入答案"
+                   android:maxLines="1"
+                    android:textColorHint="@color/textColorGray"
+                    android:textSize="@dimen/textsize_common"/>
+
+                <View
+                    android:layout_marginTop="13dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/btColorLikeRede93030"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+    <View
+       style="@style/line_gray_deep"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+    <Button
+        android:id="@+id/bt_sure_activity_reset_safe_protect_question"
+       style="@style/style_bt_red"
+        android:layout_marginBottom="20dp"
+        android:text="确定"/>
+</LinearLayout>

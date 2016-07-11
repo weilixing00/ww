@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:clipToPadding="true"
+              android:background="@color/bgColor"
+              android:fitsSystemWindows="true"
+              android:orientation="vertical">
+
+    <include layout="@layout/view_header"/>
+
+
+    <View
+        style="@style/line_gray_deep"
+        android:layout_marginTop="@dimen/margin_left10"/>
+
+    <LinearLayout
+        android:background="#FFF"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="15dp"
+            android:src="@mipmap/phone_img2x"/>
+
+        <EditText
+            android:id="@+id/et_phonenum_activity_resetpsw"
+            style="@style/style_et_textsize15"
+            android:layout_marginLeft="15sp"
+            android:hint="手机号"
+            android:textColor="@color/textColorBlack"
+            android:textColorHint="@color/hintTextColorGraycccccc"/>
+    </LinearLayout>
+
+    <View
+        style="@style/line_gray"
+        android:layout_marginLeft="@dimen/margin_left10"/>
+
+    <LinearLayout
+        android:background="#FFF"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="15dp"
+            android:src="@mipmap/yanzheng_img2x"/>
+
+        <EditText
+            android:id="@+id/et_verification_code_activity_resetpsw"
+            style="@style/style_et_textsize15"
+            android:layout_width="0dp"
+            android:layout_marginLeft="15sp"
+            android:layout_marginRight="15sp"
+            android:layout_weight="1"
+            android:hint="手机验证码"
+            android:textColor="@color/textColorBlack"
+            android:textColorHint="@color/hintTextColorGraycccccc"/>
+
+        <TextView
+            android:id="@+id/tv_obtain_verification_code_activity_resetpsw"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="14sp"
+            android:gravity="center"
+            android:text="获取验证码"
+            android:textColor="@color/btColorLikeRede93030"/>
+    </LinearLayout>
+
+    <View
+        style="@style/line_gray"
+        android:layout_marginLeft="@dimen/margin_left10"/>
+
+    <LinearLayout
+        android:background="#FFF"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="15dp"
+            android:src="@mipmap/key_img2x"/>
+
+        <EditText
+            android:id="@+id/et_new_psw_activity_resetpsw"
+            style="@style/style_et_textsize15"
+            android:layout_marginLeft="15sp"
+            android:hint="设置新密码"
+            android:textColor="@color/textColorBlack"
+            android:textColorHint="@color/hintTextColorGraycccccc"/>
+    </LinearLayout>
+
+    <View
+        style="@style/line_gray"
+        android:layout_marginLeft="@dimen/margin_left10"/>
+
+    <LinearLayout
+        android:background="#FFF"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="15dp"
+            android:src="@mipmap/key_img2x"/>
+
+        <EditText
+            android:id="@+id/et_mekasure_psw_activity_resetpsw"
+            style="@style/style_et_textsize15"
+            android:layout_marginLeft="15sp"
+            android:hint="确认密码"
+            android:textColor="@color/textColorBlack"
+            android:textColorHint="@color/hintTextColorGraycccccc"/>
+    </LinearLayout>
+
+    <View style="@style/line_gray"/>
+
+
+    <Button
+        android:id="@+id/bt_sure_activity_resetpsw"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_left10"
+        android:layout_marginRight="@dimen/margin_left10"
+        android:layout_marginTop="90dp"
+        android:background="@drawable/bg_bt_radius15"
+        android:text="确认"
+        android:textColor="#FFF"
+        android:textSize="15sp"
+        />
+
+
+</LinearLayout>

@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:fitsSystemWindows="true"
+              android:background="@color/bgColor"
+              android:clipToPadding="true"
+              android:orientation="vertical">
+
+
+    <include layout="@layout/view_header"/>
+
+    <View
+        style="@style/line_gray"
+        android:layout_marginTop="@dimen/line_margin_top8"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:orientation="vertical"
+        android:paddingLeft="13dp"
+        android:paddingRight="15dp"
+        android:background="#FFF"
+        >
+
+        <LinearLayout
+            android:id="@+id/ll_about_us_activity_setting"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="关于我们"
+                android:textColor="@color/textColorBlack"
+                android:textSize="15sp"/>
+
+            <ImageView
+                android:layout_width="13dp"
+                android:layout_height="13dp"
+                android:src="@mipmap/arrow"
+                android:id="@+id/imageView2"/>
+        </LinearLayout>
+
+        <View
+            style="@style/line_gray"
+          />
+
+        <LinearLayout
+            android:id="@+id/ll_help_center_activity_setting"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="#FFF"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="帮助中心"
+                android:textColor="@color/textColorBlack"
+                android:textSize="15sp"/>
+
+            <ImageView
+                android:layout_width="13dp"
+                android:layout_height="13dp"
+                android:src="@mipmap/arrow"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        style="@style/line_gray"
+        />
+
+    <View
+        android:layout_marginTop="8dp"
+        style="@style/line_gray"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#FFF"
+        android:paddingLeft="@dimen/margin_left10"
+        android:paddingRight="@dimen/margin_left10">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="WIFI下自动下载新版本"
+                android:textColor="@color/textColorBlack"
+                android:textSize="15sp"/>
+
+            <ImageView
+                android:id="@+id/iv_download_wifi_activity_setting"
+                android:layout_width="40dp"
+                android:layout_height="25dp"
+                android:src="@mipmap/open_img"/>
+        </LinearLayout>
+
+        <View
+            style="@style/line_gray"
+           />
+
+        <LinearLayout
+
+            android:id="@+id/ll_current_version_activity_setting"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="当前版本"
+                android:textColor="@color/textColorBlack"
+                android:textSize="15sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="版本号:  "
+                android:textColor="@color/textColorGray646464"
+                android:textSize="@dimen/textsize_smalle"
+                android:id="@+id/textView3"/>
+
+            <TextView
+                android:id="@+id/tv_version_name_activity_setting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1.0.0"
+                android:textColor="@color/textColorGray646464"
+                android:textSize="@dimen/textsize_smalle"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        style="@style/line_gray"
+        />
+
+
+
+
+    <View
+        style="@style/line_gray"
+        android:layout_marginTop="50dp"
+        />
+
+    <TextView
+        android:background="#FFF"
+        android:id="@+id/tv_exit_activity_setting"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:layout_gravity="center_horizontal"
+        android:textColor="@color/btVerificationCodeLikeRed"
+        android:text="安全退出"
+        android:textSize="15sp"
+        />
+
+    <View
+        style="@style/line_gray"
+        />
+
+
+</LinearLayout>

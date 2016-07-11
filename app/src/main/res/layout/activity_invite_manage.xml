@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:clipToPadding="true"
+              android:fitsSystemWindows="true"
+              android:background="@color/bgColor"
+              android:orientation="vertical">
+
+    <include layout="@layout/view_header"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/invitation_background"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="15dp"
+                android:src="@mipmap/invitation_line_left"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:text="我的邀请码"
+                android:textColor="#e37c72"
+                android:textSize="@dimen/textsize_smalle"/>
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="15dp"
+                android:src="@mipmap/invitation_line_right"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_invite_code_activity_invite_manage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="sahdahd"
+            android:textColor="#F00"
+            android:textSize="30dp"/>
+
+        <TextView
+            android:id="@+id/tv_invite_friend_activity_invite_manage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="15dp"
+            android:background="@mipmap/invitation_botton"
+            android:paddingBottom="6dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="6dp"
+            android:text="邀请好友"
+            android:textColor="#FFF"
+            android:textSize="@dimen/textsize_lage"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="5px"
+            android:layout_marginLeft="@dimen/margin_left10"
+            android:layout_marginRight="@dimen/margin_left10"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/line_dashes_red"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="奖励总额(元)："
+                    android:textColor="#F15647"
+                    android:textSize="15sp"/>
+
+                <TextView
+                    android:id="@+id/tv_award_amount_activity_invite_manage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_left10"
+                    android:textColor="#F15647"
+                    android:textSize="25sp"
+                    android:textStyle="bold"
+                    tools:text="100000"/>
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="邀请记录"
+        android:textColor="@color/textColorGray"
+        android:textSize="15sp"/>
+
+    <View
+        style="@style/line_gray_deep"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="center_vertical"
+        android:background="#FFF"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="58dp"
+
+
+            android:text="好友"
+            android:textColor="@color/textColorBlack"
+            android:textSize="15sp"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:text="已获奖励（元）"
+            android:textColor="@color/textColorBlack"
+            android:textSize="15sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="28dp"
+            android:text="备注"
+            android:textColor="@color/textColorBlack"
+            android:textSize="15sp"/>
+    </LinearLayout>
+    <View
+        style="@style/line_gray_deep"/>
+<include layout="@layout/item_lv_activity_invite_manage"/>
+    <ListView
+        android:id="@+id/lv_activity_invite_manage"
+        android:layout_width="match_parent"
+       android:background="#fff"
+        android:layout_height="match_parent"/>
+</LinearLayout>
