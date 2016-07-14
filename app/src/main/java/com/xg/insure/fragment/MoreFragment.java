@@ -12,9 +12,14 @@ import android.widget.TextView;
 
 import com.xg.insure.R;
 import com.xg.insure.activity.BankCardActivity;
+import com.xg.insure.activity.EmailApproveActivity;
 import com.xg.insure.activity.InviteManageActivity;
-import com.xg.insure.activity.LoginActivity;
+import com.xg.insure.mvp.account.login.LoginActivity;
+import com.xg.insure.activity.ResetEmailApproveStep1Activity;
+import com.xg.insure.activity.ResetPhoneCeritification1Activity;
+import com.xg.insure.activity.ResetTradePswActivity;
 import com.xg.insure.activity.SecurityCenterActivity;
+import com.xg.insure.activity.SetTradePswActivity;
 import com.xg.insure.activity.SettingActivity;
 import com.xg.insure.base.BaseFragment;
 import com.xg.insure.common.NoDoubleClickListener;
@@ -52,7 +57,39 @@ public class MoreFragment extends BaseFragment implements IMoreView {
     LinearLayout llInviteManageFragmentTab4Bottom;
     @BindView(R.id.ll_setting_fragment_tab4_bottom)
     LinearLayout llSettingFragmentTab4Bottom;
+    @BindView(R.id.tv_phone_fragment_tab4_bottom)
+    TextView tvPhoneFragmentTab4Bottom;
+    @BindView(R.id.ll_phone_fragment_tab4_bottom)
+    LinearLayout llPhoneFragmentTab4Bottom;
+    @BindView(R.id.tv_email_fragment_tab4_bottom)
+    TextView tvEmailFragmentTab4Bottom;
+    @BindView(R.id.ll_email_fragment_tab4_bottom)
+    LinearLayout llEmailFragmentTab4Bottom;
+    @BindView(R.id.tv_person_fragment_tab4_bottom)
+    TextView tvPersonFragmentTab4Bottom;
+    @BindView(R.id.ll_person_fragment_tab4_bottom)
+    LinearLayout llPersonFragmentTab4Bottom;
+    @BindView(R.id.tv_lock_fragment_tab4_bottom)
+    TextView tvLockFragmentTab4Bottom;
+    @BindView(R.id.ll_lock_fragment_tab4_bottom)
+    LinearLayout llLockFragmentTab4Bottom;
+    @BindView(R.id.ll_login_show_fragment_tab4_bottom)
+    LinearLayout llLoginShowFragmentTab4Bottom;
+    @BindView(R.id.tv_login_fragment_tab4_bottom)
+    TextView tvLoginFragmentTab4Bottom;
+    @BindView(R.id.ll_unlogin_show_fragment_tab4_bottom)
+    LinearLayout llUnloginShowFragmentTab4Bottom;
     private MoreFragmentPresenter moreFragmentPresenter;
+    //是否手机认证
+    private boolean isPhoneAuthentication;
+    //是否邮箱认证
+    private boolean isEmailAuthencation;
+    //是否实名认证
+    private boolean isRealNameAuthencation;
+    //是否设置交易密码
+    private boolean isSetTradePsw;
+    //是否登录
+    private boolean isLogin;
 
     @Nullable
     @Override
@@ -65,13 +102,25 @@ public class MoreFragment extends BaseFragment implements IMoreView {
     }
 
     private void initView() {
-        llBankcardFragmentTab4Bottom.setOnClickListener(noDoubleClick);
-        llInviteManageFragmentTab4Bottom.setOnClickListener(noDoubleClick);
-        llBankcardFragmentTab4Bottom.setOnClickListener(noDoubleClick);
-        llSettingFragmentTab4Bottom.setOnClickListener(noDoubleClick);
-        llSecurityCenterFragmentTab4Bottom.setOnClickListener(noDoubleClick);
+        //已经登录
+        if (isLogin) {
+            llUnloginShowFragmentTab4Bottom.setVisibility(View.GONE);
+            llLoginShowFragmentTab4Bottom.setVisibility(View.VISIBLE);
 
-        moreFragmentPresenter.loadData();
+            llBankcardFragmentTab4Bottom.setOnClickListener(noDoubleClick);
+            llInviteManageFragmentTab4Bottom.setOnClickListener(noDoubleClick);
+            llBankcardFragmentTab4Bottom.setOnClickListener(noDoubleClick);
+            llSettingFragmentTab4Bottom.setOnClickListener(noDoubleClick);
+            llSecurityCenterFragmentTab4Bottom.setOnClickListener(noDoubleClick);
+
+            moreFragmentPresenter.loadData();
+        }
+        //没有登录
+        else {
+            llUnloginShowFragmentTab4Bottom.setVisibility(View.VISIBLE);
+            llLoginShowFragmentTab4Bottom.setVisibility(View.GONE);
+            tvLoginFragmentTab4Bottom.setOnClickListener(noDoubleClick);
+        }
     }
 
     View.OnClickListener noDoubleClick = new NoDoubleClickListener() {
@@ -114,5 +163,103 @@ public class MoreFragment extends BaseFragment implements IMoreView {
     public void showData(UserStatusResponse userStatusResponse) {
         // TODO: 2016/7/9 根据网络请求的返回值显示界面不同的状态
 
+        //  已手机认证
+        if (isPhoneAuthentication) {
+            llPhoneFragmentTab4Bottom.setOnClickListener(authencationClickListener);
+        }
+        //未手机认证
+        else {
+            llPhoneFragmentTab4Bottom.setOnClickListener(unAuthencationClickListener);
+        }
+        //已邮箱认证
+        if (isEmailAuthencation) {
+            llEmailFragmentTab4Bottom.setOnClickListener(authencationClickListener);
+        }
+        //未邮箱认证
+        else {
+            llEmailFragmentTab4Bottom.setOnClickListener(unAuthencationClickListener);
+        }
+        //已实名认证
+        if (isRealNameAuthencation) {
+            llPersonFragmentTab4Bottom.setOnClickListener(authencationClickListener);
+        }
+        //未实名认证
+        else {
+            llPersonFragmentTab4Bottom.setOnClickListener(unAuthencationClickListener);
+        }
+        //已设置交易密码
+        if (isSetTradePsw) {
+            llLockFragmentTab4Bottom.setOnClickListener(authencationClickListener);
+
+        } else {
+            llLockFragmentTab4Bottom.setOnClickListener(unAuthencationClickListener);
+        }
+
     }
+
+    @Override
+    public void showError() {
+        // TODO: 2016/7/11 显示联网失败的界面
+
+    }
+
+    //已认证时候的点击事件
+    View.OnClickListener authencationClickListener =new NoDoubleClickListener() {
+        @Override
+        public void onNoDoubleClick(View v) {
+            Intent intent=null;
+            switch (v.getId()){
+                //手机认证
+                case R.id.ll_phone_fragment_tab4_bottom:
+                    intent=new Intent(getActivity(), ResetPhoneCeritification1Activity.class);
+                    startActivity(intent);
+                    break;
+                //邮箱认证
+                case R.id.ll_email_fragment_tab4_bottom:
+                    intent=new Intent(getActivity(), ResetEmailApproveStep1Activity.class);
+                    startActivity(intent);
+                    break;
+                //实名认证
+                case R.id.ll_person_fragment_tab4_bottom:
+
+                    break;
+                //交易密码
+                case R.id.ll_lock_fragment_tab4_bottom:
+                    intent=new Intent(getActivity(), ResetTradePswActivity.class);
+                    startActivity(intent);
+                    break;
+            }
+        }
+    };
+
+
+    //未认证时候的点击事件
+    View.OnClickListener unAuthencationClickListener=new NoDoubleClickListener() {
+        @Override
+        public void onNoDoubleClick(View v) {
+            Intent intent=null;
+            switch (v.getId()){
+                //手机认证  一般情况都已经认证了
+                case R.id.ll_phone_fragment_tab4_bottom:
+
+                    break;
+                //邮箱认证
+                case R.id.ll_email_fragment_tab4_bottom:
+                    intent=new Intent(getActivity(), EmailApproveActivity.class);
+                    startActivity(intent);
+                    break;
+                //实名认证
+                case R.id.ll_person_fragment_tab4_bottom:
+
+                    break;
+                //交易密码
+                case R.id.ll_lock_fragment_tab4_bottom:
+                    intent=new Intent(getActivity(), SetTradePswActivity.class);
+                    startActivity(intent);
+                    break;
+            }
+        }
+    };
+
+
 }

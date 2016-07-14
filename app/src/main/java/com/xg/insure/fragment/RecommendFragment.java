@@ -17,14 +17,19 @@ import com.bigkoo.convenientbanner.holder.CBViewHolderCreator;
 import com.bigkoo.convenientbanner.holder.Holder;
 import com.xg.insure.R;
 import com.xg.insure.base.BaseFragment;
+import com.xg.insure.bean.RecommendResponse;
+import com.xg.insure.mvp.Presenter.RecommendPresenter;
+import com.xg.insure.mvp.view.IRecommendView;
 import com.xg.insure.net.retrofit.MyRetrofit;
 import com.xg.insure.net.service.RequestService;
 import com.xg.insure.net.service.TestResponse;
+import com.xg.insure.ui.AutoRollLayout;
 import com.xg.insure.ui.WaveHelper;
 import com.xg.insure.ui.WaveView;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import butterknife.BindView;
@@ -37,11 +42,11 @@ import retrofit2.Retrofit;
 /**
  * Created by admin on 2016/6/7.
  */
-public class RecommendFragment extends BaseFragment {
+public class RecommendFragment extends BaseFragment implements IRecommendView{
 
 
     @BindView(R.id.banner_fragment_bottom_tab1)
-    ConvenientBanner bannerFragmentBottomTab1;
+    AutoRollLayout bannerFragmentBottomTab1;
     @BindView(R.id.iv_affiche_fragment_bottom_tab1)
     ImageView ivAfficheFragmentBottomTab1;
 
@@ -59,33 +64,18 @@ public class RecommendFragment extends BaseFragment {
         ButterKnife.bind(this, view);
         initView();
         return view;
+
     }
 
 
     private void initView() {
+        RecommendPresenter recommendPresenter=new RecommendPresenter(this);
+        recommendPresenter.loadData();
+
         initWaveView();
         initBanner();
 
-        Retrofit retrofit = MyRetrofit.retrofit();
 
-        RequestService requestService = retrofit.create(RequestService.class);
-
-        Map<String, String> map=new HashMap<>();
-        map.put("pageIndex","1");
-        map.put("pageSize","5");
-        Call<TestResponse> test = requestService.test(map);
-        test.enqueue(new Callback<TestResponse>() {
-            @Override
-            public void onResponse(Call<TestResponse> call, Response<TestResponse> response) {
-                TestResponse body = response.body();
-                Toast.makeText(getContext(), "body"+body.count, Toast.LENGTH_SHORT).show();
-            }
-
-            @Override
-            public void onFailure(Call<TestResponse> call, Throwable t) {
-
-            }
-        });
 
     }
 
@@ -105,7 +95,6 @@ public class RecommendFragment extends BaseFragment {
         //设置形状
         waveviewFragmentBottomTab1.setShapeType(WaveView.ShapeType.CIRCLE);
         waveviewFragmentBottomTab1.setBorder(10, Color.parseColor("#FFAE00"));
-
     }
 
     private void initBanner() {
@@ -115,21 +104,14 @@ public class RecommendFragment extends BaseFragment {
         localImages.add(R.mipmap.banner_img2x);
         localImages.add(R.mipmap.banner_img2x);
 
-        bannerFragmentBottomTab1.setPages(
-                new CBViewHolderCreator<LocalImageHolderView>() {
-                    @Override
-                    public LocalImageHolderView createHolder() {
-                        return new LocalImageHolderView();
-                    }
-                }, localImages)
-                .setPointViewVisible(true)
-                //设置两个点图片作为翻页指示器，不设置则没有指示器，可以根据自己需求自行配合自己的指示器,不需要圆点指示器可用不设
-                .setPageIndicator(new int[]{R.drawable.ic_page_indicator, R.drawable.ic_page_indicator_focused})
-                //设置指示器的方向
-                .setPageIndicatorAlign(ConvenientBanner.PageIndicatorAlign.CENTER_HORIZONTAL).setCanLoop(true);
-        //设置翻页的效果，不需要翻页效果可用不设
-        //.setPageTransformer(Transformer.DefaultTransformer);    集成特效之后会有白屏现象，新版已经分离，如果要集成特效的例子可以看Demo的点击响应。
-//        convenientBanner.setManualPageable(false);//设置不能手动影响
+        List<AutoRollLayout.RollItem> items=new ArrayList<>();
+        items.add(new AutoRollLayout.RollItem(null,R.mipmap.banner_img2x));
+        items.add(new AutoRollLayout.RollItem(null,R.mipmap.banner_img2x));
+        items.add(new AutoRollLayout.RollItem(null,R.mipmap.banner_img2x));
+        items.add(new AutoRollLayout.RollItem(null,R.mipmap.banner_img2x));
+        bannerFragmentBottomTab1.setItems(items);
+        bannerFragmentBottomTab1.setAutoRoll(true);
+
     }
 
     @Override
@@ -144,6 +126,17 @@ public class RecommendFragment extends BaseFragment {
         super.onStart();
 
         waveHelper.start();
+    }
+
+    // TODO: 2016/7/12 显示网络请求获取成功的数据
+    @Override
+    public void showData(RecommendResponse recommendResponse) {
+
+    }
+
+    @Override
+    public void showError() {
+
     }
 
     private class LocalImageHolderView implements Holder<Integer> {

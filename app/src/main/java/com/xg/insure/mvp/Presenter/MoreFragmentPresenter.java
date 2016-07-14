@@ -7,6 +7,7 @@ import com.xg.insure.mvp.view.IMoreView;
 
 /**
  * Created by server on 2016/7/8.
+ * 更多Fragment的P
  */
 
 public class MoreFragmentPresenter {
@@ -27,7 +28,7 @@ public class MoreFragmentPresenter {
 
             @Override
             public void onLoadFail() {
-
+                iMoreView.showError();
             }
         });
     }

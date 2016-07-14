@@ -8,4 +8,6 @@ import com.xg.insure.mvp.model.UserStatusResponse;
 
 public interface IMoreView {
     void showData(UserStatusResponse userStatusResponse);
+
+    void showError();
 }

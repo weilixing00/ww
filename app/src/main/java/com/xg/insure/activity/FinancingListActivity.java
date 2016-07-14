@@ -14,6 +14,7 @@ import com.xg.insure.adapter.FinancingListActivityVPAdapter;
 import com.xg.insure.base.BaseActivity;
 import com.xg.insure.common.NoDoubleClickListener;
 import com.xg.insure.constant.KeyConstant;
+import com.xg.insure.mvp.home.MainActivity;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;

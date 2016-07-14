@@ -1,6 +1,9 @@
 package com.xg.insure.net.service;
 
+import com.xg.insure.bean.LoginMsgCodeResponse;
 import com.xg.insure.bean.LoginResponse;
+import com.xg.insure.bean.RecommendResponse;
+import com.xg.insure.bean.RegistResponse;
 import com.xg.insure.bean.ResetLoginPswResponse;
 import com.xg.insure.constant.HttpConstant;
 import com.xg.insure.mvp.model.UserStatusResponse;
@@ -37,10 +40,28 @@ public interface RequestService {
     @POST(HttpConstant.RESET_LOGIN_PSW)
     Call<ResetLoginPswResponse> resetLoginPsw(@FieldMap Map<String,String> fields);
 
-    //测试用的  到时候删了
+    /**
+     * 注册登录密码调用的接口
+     * @param fields
+     * @return
+     */
     @FormUrlEncoded
-    @POST(HttpConstant.Test)
-    Call<TestResponse> test(@FieldMap Map<String, String> fields);
+    @POST(HttpConstant.RESET_LOGIN_PSW)
+    Call<RegistResponse> resist(@FieldMap Map<String,String> fields);
+    /**
+     * 获取登录验证码调用的接口
+     * @param fields
+     * @return
+     */
+    @FormUrlEncoded
+    @POST(HttpConstant.RESET_LOGIN_PSW)
+    Call<LoginMsgCodeResponse> loginMsgCode(@FieldMap Map<String,String> fields);
+
+
+    //推荐Fragment的调用接口
+    @FormUrlEncoded
+    @POST(HttpConstant.RECOMMEND)
+    Call<RecommendResponse> recommend(@FieldMap Map<String, String> fields);
 
     /**
      * 获取用户登录状态 各种认证状态

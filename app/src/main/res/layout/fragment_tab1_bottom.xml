@@ -17,7 +17,8 @@
             android:layout_height="wrap_content">
 
 
-            <com.bigkoo.convenientbanner.ConvenientBanner
+
+            <com.xg.insure.ui.AutoRollLayout
                 android:id="@+id/banner_fragment_bottom_tab1"
                 android:layout_width="match_parent"
                 android:layout_height="180dp"
