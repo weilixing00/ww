@@ -12,17 +12,13 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.bigkoo.convenientbanner.ConvenientBanner;
-import com.bigkoo.convenientbanner.holder.CBViewHolderCreator;
-import com.bigkoo.convenientbanner.holder.Holder;
+
 import com.xg.insure.R;
 import com.xg.insure.base.BaseFragment;
 import com.xg.insure.bean.RecommendResponse;
 import com.xg.insure.mvp.Presenter.RecommendPresenter;
 import com.xg.insure.mvp.view.IRecommendView;
-import com.xg.insure.net.retrofit.MyRetrofit;
-import com.xg.insure.net.service.RequestService;
-import com.xg.insure.net.service.TestResponse;
+
 import com.xg.insure.ui.AutoRollLayout;
 import com.xg.insure.ui.WaveHelper;
 import com.xg.insure.ui.WaveView;
@@ -34,10 +30,7 @@ import java.util.Map;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
-import retrofit2.Retrofit;
+
 
 /**
  * Created by admin on 2016/6/7.
@@ -139,19 +132,4 @@ public class RecommendFragment extends BaseFragment implements IRecommendView{
 
     }
 
-    private class LocalImageHolderView implements Holder<Integer> {
-        private ImageView imageView;
-
-        @Override
-        public View createView(Context context) {
-            imageView = new ImageView(context);
-            imageView.setScaleType(ImageView.ScaleType.FIT_XY);
-            return imageView;
-        }
-
-        @Override
-        public void UpdateUI(Context context, final int position, Integer data) {
-            imageView.setImageResource(data);
-        }
-    }
 }

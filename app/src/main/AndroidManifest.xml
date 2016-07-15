@@ -12,9 +12,6 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activity.TestActivity">
-
-        </activity>
         <activity
             android:name=".mvp.home.MainActivity"
             android:launchMode="singleTask">
@@ -34,7 +31,7 @@
             android:hardwareAccelerated="false">
 
         </activity>
-        <activity android:name=".activity.ResetPswActivity"/>
+        <activity android:name=".mvp.account.resetpsw.ResetPswActivity"/>
         <activity android:name=".activity.SetSecurityProtectQuestionActiviy">
 
         </activity>
@@ -64,7 +61,7 @@
         <activity android:name=".activity.DeleteBankCardActivity"/>
         <activity android:name=".activity.SecurityCenterActivity">
         </activity>
-        <activity android:name=".activity.ResetLoginPSWActivity">
+        <activity android:name=".mvp.account.modifyloginpsw.ResetLoginPSWActivity">
 
         </activity>
 

@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:layout_width="match_parent"
-              android:layout_height="match_parent" android:fitsSystemWindows="true"
+              android:layout_height="match_parent"
+              android:background="@color/bgColor"
               android:clipToPadding="true"
-
+              android:fitsSystemWindows="true"
               android:orientation="vertical">
 
     <include layout="@layout/view_header"/>
@@ -12,80 +13,96 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/line_margin_top8"
-        android:layout_marginLeft="@dimen/margin_left10"
+        android:layout_marginLeft="33dp"
         android:layout_marginTop="@dimen/line_margin_top8"
-        android:text="   * 认证邮箱可以提高账户安全等级"
-        android:textColor="#FF0"
+        android:text="* 认证邮箱可以提高账户安全等级"
+        android:textColor="#c1715e"
         android:textSize="@dimen/textsize_smaller"/>
 
-    <View
-        style="@style/line_gray"/>
+    <View style="@style/line_gray_deep"/>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_vertical"
+        android:layout_height="60dp"
+        android:background="#fff"
+        android:gravity="center_vertical"
         android:orientation="horizontal"
-        android:padding="@dimen/margin_left10">
+        >
 
         <ImageView
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@mipmap/ic_launcher"/>
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="20dp"
+
+            android:src="@mipmap/mailauthentication_mail"/>
 
         <EditText
-            android:singleLine="true"
-            android:id="@+id/et_new_email_address_activity_email_approve"
-            android:paddingLeft="8dp"
+            android:id="@+id/et_email_address_activity_email_approve"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_gravity="center_vertical"
-            android:hint="新邮箱地址"
             android:background="@null"
+            android:hint="邮箱地址"
+            android:paddingLeft="15dp"
+            android:singleLine="true"
             android:textColorHint="@color/textColorGray"
-            android:textSize="@dimen/textsize_common"/>
+            android:textCursorDrawable="@drawable/color_cursor"
+            android:textSize="@dimen/textsize_smalle"/>
     </LinearLayout>
 
     <View
-        style="@style/line_gray"
-        android:layout_marginBottom="@dimen/margin_left10"
-        android:layout_marginTop="@dimen/margin_left10"/>
+        style="@style/line_gray_deep"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"/>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="60dp"
+        android:background="#fff"
         android:gravity="center_vertical"
         android:orientation="horizontal"
-        android:padding="@dimen/margin_left10">
+        >
 
         <ImageView
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@mipmap/ic_launcher"/>
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="20dp"
+            android:src="@mipmap/mailauthentication_message"/>
 
         <EditText
             android:id="@+id/et_email_verification_code_activity_email_approve"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:paddingLeft="8dp"
             android:layout_weight="1"
             android:hint="邮箱验证码"
+            android:paddingLeft="15dp"
             android:textColorHint="@color/textColorGray"
-            android:textSize="@dimen/textsize_common"/>
+            android:textSize="@dimen/textsize_smalle"/>
+
+        <View
+            android:layout_width="1px"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/lineGray"/>
 
         <TextView
             android:id="@+id/tv_obtain_verification_code_activity_email_approve"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:paddingRight="15dp"
             android:text="获取验证码"
-            android:textColor="#F00"
-            android:textSize="@dimen/textsize_common"/>
+            android:textColor="@color/btColorLikeRede93030"
+            android:textSize="@dimen/textsize_smalle"/>
     </LinearLayout>
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"/>
+    <View style="@style/line_gray_deep"/>
+<View
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="1"/>
 
     <Button
         android:id="@+id/bt_sure_activity_email_approve"

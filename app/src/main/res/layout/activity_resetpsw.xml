@@ -30,6 +30,8 @@
             android:src="@mipmap/phone_img2x"/>
 
         <EditText
+            android:textCursorDrawable="@drawable/color_cursor"
+            android:inputType="number"
             android:id="@+id/et_phonenum_activity_resetpsw"
             style="@style/style_et_textsize15"
             android:layout_marginLeft="15sp"
@@ -56,6 +58,8 @@
             android:src="@mipmap/yanzheng_img2x"/>
 
         <EditText
+            android:inputType="number"
+            android:textCursorDrawable="@drawable/color_cursor"
             android:id="@+id/et_verification_code_activity_resetpsw"
             style="@style/style_et_textsize15"
             android:layout_width="0dp"
@@ -94,6 +98,8 @@
             android:src="@mipmap/key_img2x"/>
 
         <EditText
+            android:inputType="textPassword"
+            android:textCursorDrawable="@drawable/color_cursor"
             android:id="@+id/et_new_psw_activity_resetpsw"
             style="@style/style_et_textsize15"
             android:layout_marginLeft="15sp"
@@ -120,6 +126,8 @@
             android:src="@mipmap/key_img2x"/>
 
         <EditText
+            android:inputType="textPassword"
+            android:textCursorDrawable="@drawable/color_cursor"
             android:id="@+id/et_mekasure_psw_activity_resetpsw"
             style="@style/style_et_textsize15"
             android:layout_marginLeft="15sp"

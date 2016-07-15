@@ -12,11 +12,11 @@ import android.widget.TextView;
 
 import com.xg.insure.R;
 import com.xg.insure.activity.BankCardActivity;
-import com.xg.insure.activity.EmailApproveActivity;
+import com.xg.insure.mvp.account.emailapprove.EmailApproveActivity;
 import com.xg.insure.activity.InviteManageActivity;
 import com.xg.insure.mvp.account.login.LoginActivity;
 import com.xg.insure.activity.ResetEmailApproveStep1Activity;
-import com.xg.insure.activity.ResetPhoneCeritification1Activity;
+import com.xg.insure.mvp.account.modifyphoneapprove.ResetPhoneCeritification1Activity;
 import com.xg.insure.activity.ResetTradePswActivity;
 import com.xg.insure.activity.SecurityCenterActivity;
 import com.xg.insure.activity.SetTradePswActivity;

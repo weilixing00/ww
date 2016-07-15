@@ -1,10 +1,10 @@
 [
     {
-        "merged": "D:\\android\\projects\\Insure\\library\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\j_anim_exit_bottom.xml",
-        "source": "D:\\android\\projects\\Insure\\library\\build\\intermediates\\bundles\\debug\\res\\anim\\j_anim_exit_bottom.xml"
+        "merged": "D:\\android\\projects\\insureGit\\ww\\library\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\j_anim_exit_bottom.xml",
+        "source": "D:\\android\\projects\\insureGit\\ww\\library\\build\\intermediates\\bundles\\debug\\res\\anim\\j_anim_exit_bottom.xml"
     },
     {
-        "merged": "D:\\android\\projects\\Insure\\library\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\j_anim_enter_bottom.xml",
-        "source": "D:\\android\\projects\\Insure\\library\\build\\intermediates\\bundles\\debug\\res\\anim\\j_anim_enter_bottom.xml"
+        "merged": "D:\\android\\projects\\insureGit\\ww\\library\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\j_anim_enter_bottom.xml",
+        "source": "D:\\android\\projects\\insureGit\\ww\\library\\build\\intermediates\\bundles\\debug\\res\\anim\\j_anim_enter_bottom.xml"
     }
 ]

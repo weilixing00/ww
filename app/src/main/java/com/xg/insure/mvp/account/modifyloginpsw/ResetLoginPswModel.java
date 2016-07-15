@@ -1,8 +1,6 @@
-package com.xg.insure.mvp.Presenter;
+package com.xg.insure.mvp.account.modifyloginpsw;
 
 import com.xg.insure.bean.ResetLoginPswResponse;
-import com.xg.insure.mvp.model.ResetLoginPswModel;
-import com.xg.insure.mvp.view.IResetPswView;
 import com.xg.insure.net.retrofit.MyRetrofit;
 import com.xg.insure.net.service.RequestService;
 
@@ -15,38 +13,44 @@ import retrofit2.Response;
 
 /**
  * Created by server on 2016/6/21.
- * ResetPswActivity的逻辑实现
  */
 
-public class ResetLoginPswPresenter {
-    private IResetPswView view;
+public class ResetLoginPswModel {
 
-    public ResetLoginPswPresenter(IResetPswView view) {
-        this.view = view;
+
+    private final ResetLoginPswContract.IPresenter iPresenter;
+
+    public ResetLoginPswModel(ResetLoginPswContract.IPresenter iPresenter) {
+            this.iPresenter=iPresenter;
     }
 
-    public void resetLoginPsw(ResetLoginPswModel resetLoginPswModel){
+
+    public void performRestLoginPsw(String oriPsw, String newPsw){
         RequestService requestService = MyRetrofit.retrofit().create(RequestService.class);
         Map<String, String> resetLoginPswMap=new HashMap<>();
-        resetLoginPswMap.put("", resetLoginPswModel.getPhoneNum());
-        resetLoginPswMap.put("", resetLoginPswModel.getVerificationCode());
+        resetLoginPswMap.put("", oriPsw);
+
+        resetLoginPswMap.put("", newPsw);
         Call<ResetLoginPswResponse> resetLoginPswResponseCall = requestService.resetLoginPsw(resetLoginPswMap);
         resetLoginPswResponseCall.enqueue(new Callback<ResetLoginPswResponse>() {
             @Override
             public void onResponse(Call<ResetLoginPswResponse> call, Response<ResetLoginPswResponse> response) {
                 ResetLoginPswResponse body = response.body();
+                //成功
+                iPresenter.onResetSuccess();
+
+                //失败  显示错误信息
+                iPresenter.onResetFail();
+
 //                body.code
             }
 
             @Override
             public void onFailure(Call<ResetLoginPswResponse> call, Throwable t) {
-
+            iPresenter.onNetError();
             }
         });
     }
-
-
-
 
 
 }
