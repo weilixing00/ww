@@ -15,10 +15,6 @@
         <activity
             android:name=".mvp.home.MainActivity"
             android:launchMode="singleTask">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-                <category android:name="android.intent.category.LAUNCHER"/>
-            </intent-filter>
         </activity>
         <activity android:name=".activity.SplashActivity">
 
@@ -32,8 +28,11 @@
 
         </activity>
         <activity android:name=".mvp.account.resetpsw.ResetPswActivity"/>
-        <activity android:name=".activity.SetSecurityProtectQuestionActiviy">
-
+        <activity android:name=".mvp.account.safeprotectquestion.SetSafeProtectQuestionActiviy">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
         </activity>
         <activity android:name=".activity.InviteManageActivity">
 
@@ -64,7 +63,6 @@
         <activity android:name=".mvp.account.modifyloginpsw.ResetLoginPSWActivity">
 
         </activity>
-
     </application>
 
 </manifest>

@@ -1,6 +1,5 @@
-package com.xg.insure.activity;
+package com.xg.insure.mvp.account.safeprotectquestion;
 
-import android.app.Activity;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.Gravity;
@@ -16,8 +15,9 @@ import android.widget.Toast;
 
 import com.xg.insure.R;
 import com.xg.insure.base.BaseActivity;
+import com.xg.insure.base.BaseApplication;
 import com.xg.insure.common.NoDoubleClickListener;
-import com.xg.insure.mvp.Presenter.SetSecurityProtectQuestionActiviyPresenter;
+import com.xg.insure.util.JUtils;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -30,9 +30,11 @@ import cn.jeesoft.widget.pickerview.CharacterPickerWindow;
 
 /**
  * Created by server on 2016/6/27.
+ * 设置安全保护问题
+ * 因为内容比较简单 所以没用mvp  所有都写在activity里
  */
 
-public class SetSecurityProtectQuestionActiviy extends BaseActivity {
+public class SetSafeProtectQuestionActiviy extends BaseActivity implements ResetSafeQuestionContract.IResetSafeQuestionView{
 
 
     @BindView(R.id.iv_back_header)
@@ -53,7 +55,8 @@ public class SetSecurityProtectQuestionActiviy extends BaseActivity {
     EditText etAnswerActivitySetSecurityProtectQuestion;
     @BindView(R.id.bt_sure_activity_set_security_protect_question)
     Button btSureActivitySetSecurityProtectQuestion;
-    private SetSecurityProtectQuestionActiviyPresenter setSecurityProtectQuestionActiviyPresenter;
+
+    private String question;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -63,32 +66,44 @@ public class SetSecurityProtectQuestionActiviy extends BaseActivity {
         initView();
     }
 
+    //设置标记位之后 防止点击问题弹窗被重复弹出
+    private boolean isPopOpen=false;
     private void initView() {
-        setSecurityProtectQuestionActiviyPresenter = new SetSecurityProtectQuestionActiviyPresenter(this);
+
         tvTitleHeader.setText("设置安全保护问题");
         ivBackHeader.setOnClickListener(noDoubleClick);
         btSureActivitySetSecurityProtectQuestion.setOnClickListener(noDoubleClick);
         llChoseQuestionActivitySetSecurityProtectQuestion.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if (isPopOpen){
+                    isPopOpen=false;
+                    return;
+                }
+                isPopOpen=true;
                 //弹出安全保护问题popuwindow
                 //初始化
-                final CharacterPickerWindow window = setSecurityProtectQuestionActiviyPresenter.builder(SetSecurityProtectQuestionActiviy.this, new OnOptionsSelectListener() {
+                //选项选择器
+                CharacterPickerWindow window = new CharacterPickerWindow(BaseApplication.context);
+                //初始化选项数据
+                setPickerData(window.getPickerView());
+                window.setSelectOptions(0);
+                //监听确定选择按钮
+                window.setOnoptionsSelectListener(new CharacterPickerWindow.OnOptionsSelectListener() {
                     @Override
-                    public void onOptionsSelect(String province) {
-                        tvQuestionActivitySetSecurityProtectQuestion.setText(province);
-                        Toast.makeText(SetSecurityProtectQuestionActiviy.this, "" + province, Toast.LENGTH_SHORT).show();
+                    public void onOptionsSelect(int options1) {
+                        question = options1Items.get(options1);
+                        JUtils.Toast(question);
                     }
                 });
 
                 window.showAtLocation(v, Gravity.BOTTOM, 0, 0);
                 //设置背景色半透明
-                setSecurityProtectQuestionActiviyPresenter.backgroundAlpha(0.3f);
-
+                backgroundAlpha(0.3f);
                 window.setOnDismissListener(new PopupWindow.OnDismissListener() {
                     @Override
                     public void onDismiss() {
-                        setSecurityProtectQuestionActiviyPresenter.backgroundAlpha(1);
+                        backgroundAlpha(1);
                     }
                 });
 
@@ -97,18 +112,54 @@ public class SetSecurityProtectQuestionActiviy extends BaseActivity {
     }
 
 
+    private static List<String> options1Items = null;
 
 
-    public static interface OnOptionsSelectListener {
-        public void onOptionsSelect(String province);
+
+    /**
+     * 初始化选项数据
+     */
+    public static void setPickerData(CharacterPickerView view) {
+
+        if (options1Items == null) {
+            options1Items = new ArrayList();
+            for (int i = 0; i < 30; i++) {
+
+                options1Items.add("sadasdsdsad" + i);
+            }
+
+        }
+        //设置数据源
+        view.setPicker(options1Items);
     }
 
+    /**
+     * 设置添加屏幕的背景透明度
+     * @param bgAlpha
+     */
+    public void backgroundAlpha(float bgAlpha) {
+        WindowManager.LayoutParams lp = getWindow().getAttributes();
+        lp.alpha = bgAlpha; //0.0-1.0
+        getWindow().setAttributes(lp);
+    }
 
+    //无此功能 可以不实现
+    @Override
+    public void onObtainMsgCodeSuccess() {}
 
+    //无此功能 可以不实现
+    @Override
+    public void onObtainMsgCodeFail() {}
 
+    @Override
+    public void onResetSuccess() {
 
+    }
 
+    @Override
+    public void onResetFail() {
 
+    }
 
 
     View.OnClickListener noDoubleClick = new NoDoubleClickListener() {

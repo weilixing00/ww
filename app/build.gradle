@@ -65,6 +65,7 @@ dependencies {
     //recycleView
     compile 'com.jude:easyrecyclerview:4.0.2'
     compile files('libs/pickwheel.jar')
+    //底部问题选择框
     compile project(':library')
 }
 
